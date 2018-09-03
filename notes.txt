@@ -3,7 +3,7 @@ notes.txt
 -Command line HTTP client that will request all the avatars from contributors to a certain project on github
 
 
--given a REPO name and owner downloan all contributors and save into sub directory
+-given a REPO name and owner download all contributors and save into sub directory
 
 
 
@@ -28,7 +28,7 @@ ______________________
 
 
 GIVEN:
--pull all avarars Given : Node is installed, Are in a shell, have your file in my current folder
+-pull all avatars Given : Node is installed, Are in a shell, have your file in my current folder
 
 When:
 -Execute file using node, providing a **github user and resposity as command line arguments**

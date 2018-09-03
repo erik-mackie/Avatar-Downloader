@@ -1,7 +1,7 @@
 {
   "name": "avatar-downloader",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Problem Statement",
   "main": "download_avatars.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,7 @@
   "homepage": "https://github.com/erik-mackie/Avatar-Downloader#readme",
   "dependencies": {
     "request": "^2.88.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
