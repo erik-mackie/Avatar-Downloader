@@ -1,10 +1,10 @@
 var request = require('request');
-const TOKEN = require('secrets')
+const TOKEN = require('./secrets')
 /*var images = require("./pullImage")*/;
 
-var args1 = process.argv[2];
+/*var args1 = process.argv[2];
 var args2 = process.argv[3];
-
+*/
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
     url: `https://api.github.com/repos/${repoOwner}/${repoName}/contributors`,
@@ -12,21 +12,15 @@ function getRepoContributors(repoOwner, repoName, cb) {
       'User-Agent': 'request'
     }
   };
-
-  request(url, function(err, res, body) {
+  request(options, (err, res, body) => {
     cb(err, body);
+
   });
 }
 
-
-
-
-
-
-
-
-
-getRepoContributors("jquery", "jquery", function(err, result) {
+getRepoContributors("jquery", "jquery", (err, result) => {
   console.log("Errors:", err);
-  console.log("Result:", result);
-});
+  JSON.parse(result).forEach(val => {
+    console.log(`Result: ${val.avatar_url}`)
+  });
+})
