@@ -1,0 +1,60 @@
+notes.txt
+
+-Command line HTTP client that will request all the avatars from contributors to a certain project on github
+
+
+-given a REPO name and owner downloan all contributors and save into sub directory
+
+
+
+EXPECTED USAGE
+______________
+
+
+- program should be executing from the command line using"
+
+node download_avatars.js jquery jquery
+
+
+- any valid repo-owner +repo compbination can be used:
+
+node download_avatars.js nodejs node
+
+
+
+
+FUNCTION REQUIRMENTS
+______________________
+
+
+GIVEN:
+-pull all avarars Given : Node is installed, Are in a shell, have your file in my current folder
+
+When:
+-Execute file using node, providing a **github user and resposity as command line arguments**
+
+for example :    node download_avatars.js erik-mackie myREPO
+
+Then:
+- should deposit avatars into new folder called avatars in current directory
+-avatars folder should contain images
+
+-name of each file (avatar image) should be the contributors name with file extention
+
+
+Implementation requirments
+___________________________
+
+-uses request library
+uses git for version control
+
+
+
+
+
+
+
+
+
+
+
