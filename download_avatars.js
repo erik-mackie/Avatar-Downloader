@@ -2,10 +2,9 @@ var request = require('request');
 const TOKEN = require('./secrets');
 var imageByUrl = require('./downloadImage');
 
+var arg1 = process.argv[2];
+var arg2 = process.argv[3];
 
-/*var args1 = process.argv[2];
-var args2 = process.argv[3];
-*/
 
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
@@ -21,7 +20,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
 }
 
 //call back refactor so loop isnt in here
-getRepoContributors("jquery", "jquery", (err, result) => {
+getRepoContributors(`${arg1}`,`${arg2}`, (err, result) => {
   console.log("Errors:", err);
   // parse and loop imported string so values are accessable
   JSON.parse(result).forEach(val => {
@@ -31,5 +30,5 @@ getRepoContributors("jquery", "jquery", (err, result) => {
 })
 
 
-
+/*node download_avatars.js jquery jquery*/
 
